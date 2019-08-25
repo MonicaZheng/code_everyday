@@ -1,0 +1,642 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>7.14-8.14刷题</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="a9d6d089-e7c0-404e-bc6b-a847489727f7" class="page sans"><header><h1 class="page-title">7.14-8.14刷题</h1></header><div class="page-body"><p id="20af64a5-bc04-4163-b31a-9501ce13319d" class="">7/13</p><h3 id="94b50932-dc68-48e7-9aa7-29570a06d22d" class="">binary tree</h3><ol id="1d27fe0e-f3a8-4176-9474-c7d00a9cbc52" class="numbered-list" start="1"><li>lintcode 11. Search Range in Binary Search Tree </li></ol><p id="0b82dab0-f2d8-4409-b088-e71fe3119847" class="">优化： 不把所有的node加进去：</p><pre id="406f8129-5523-4843-ac6b-bd86fea359da" class="code"><code>if node.left and node.val &gt;= k1:
+queue.append(node.left)
+if node.right and node.val &lt;= k2:
+queue.append(node.right)</code></pre><p id="9a5822c5-a007-434d-93b3-701e131f4d41" class="">2. lintocde 597. Subtree with Maximum Average</p><p id="5d4586d4-6745-458f-9afe-d9131cad1256" class="">3. lintcode 88. Lowest Common Ancestor of a Binary Tree</p><h3 id="b13a1fea-e7c8-48ac-bb95-69a54a190ebe" class="">two pointers</h3><p id="7a55c7c5-8547-446f-b800-60f67c065f02" class="">1.  lintcode 443. Two Sum - Greater than target</p><p id="c374d2e4-3d9c-4939-9c7a-b06cd8d4c792" class="">2. lintcode 533. Two Sum - Closest to target</p><p id="644b3e7f-bae2-4e17-8a0d-8fb0b4702f82" class="">3. lintcode 380. Intersection of Two Linked Lists</p><p id="a3a902ec-12da-4e3d-97d6-108bff5605dc" class="">4. leetcode 16. 3Sum Closest</p><p id="0d155b37-bc1d-4978-a739-7afa23c0fa19" class="">
+</p><p id="0f4aaf86-b258-42f3-b7f5-2ffb711f7804" class="">7/14 </p><h3 id="381b28ee-9ae9-4227-bef3-052d36247c0d" class="">binary tree(求值问题避免使用全局变量！！)</h3><ol id="87eabc38-7488-40b0-9857-6d205d966f0d" class="numbered-list" start="1"><li>lintocde 596. Minimum Subtree (传多个参数)</li></ol><pre id="d741ed08-7b95-49be-a57f-dce448fdc7e4" class="code"><code>minimum_sum, subtree, cur_sum = self.helper(root)
+return subtree</code></pre><p id="7aec55a4-19c4-41d7-84b6-895ef387e25b" class="">2. lintcode 597. Subtree with Maximum Average</p><h3 id="e612511a-859b-4c78-ad5f-c930c4786894" class="">two pointers</h3><ol id="5f8589bb-fdfc-4a94-b45a-cd23ff9db290" class="numbered-list" start="1"><li>leetcode 16. 3Sum Closest(先固定一个)</li></ol><ol id="5688b199-5352-4ffa-8f1f-7acff469c60d" class="numbered-list" start="2"><li>leetcode 86. Partition List ()</li></ol><p id="f30d1e07-1ea4-49f3-919d-1474defef076" class="">加进去的head is not a single node, it leads next node.</p><ol id="12504d0c-a3d8-41bb-a98e-c0a2cf039ac2" class="numbered-list" start="1"><li>leetcode 215. Kth Largest Element in an Array (quick select!!!!)</li></ol><p id="2b47222a-b135-4dcb-bd96-02dcb2aa5eb2" class="">
+</p><p id="f5d48c9a-1a58-42ee-992c-7ce2d9a8cb1e" class="">7/15 </p><h3 id="2a9de1bf-df60-4910-92ab-d8c4e1e4e5e2" class="">two pointers</h3><ol id="575b1bca-165d-42d1-984d-6abbae9d373c" class="numbered-list" start="1"><li>leetcode 283. Move Zeroes (Minimize the total number of operations.)</li></ol><h3 id="a920dae2-349b-4e8c-8fb9-83cb36a52f30" class="">dfs</h3><ol id="69459fef-a4db-4611-b040-17d7f86877c2" class="numbered-list" start="1"><li>leetcode 78. Subsets</li></ol><ol id="a1efe20c-fc54-49c9-9283-71c32c2d42f1" class="numbered-list" start="2"><li>leetcode 90. Subsets II （这个数和原来是一样的并且没有被挑过，则continue）</li></ol><ol id="7e2571c4-fbe4-45c8-a0d1-592c40f3993f" class="numbered-list" start="3"><li>leetcode 39. Combination Sum(如果正确sort)</li></ol><ol id="08585003-3cfc-42c5-8321-18bd4edfab89" class="numbered-list" start="4"><li>leetcode 46. Permutations(用visited判断ele是否添加过)</li></ol><ol id="1879294c-bc12-48f0-b03c-d29fcd6847f2" class="numbered-list" start="5"><li>leetcode 47. Permutations II(去重)</li></ol><p id="f191aeca-1f23-4c04-b008-f66f00e54347" class="">
+</p><p id="e0e1013c-85f6-408b-bf22-725adc857b2e" class=""> 7/16 </p><h3 id="961db411-54ec-47e2-8286-20dd53024b2b" class="">hashmap</h3><ol id="e0ff7772-f33a-42c3-9b7a-08179524e8ff" class="numbered-list" start="1"><li>lintcode 211. String Permutation(把a的元素全部加进map，然后遍历b, 没找到false，找到了-1)</li></ol><h3 id="be371ec3-3dc4-4e36-ad4c-6d016c270d44" class="">dfs</h3><ol id="d7b80264-76cd-4df5-888f-c9fa5389c091" class="numbered-list" start="1"><li>String Permutation II (与permutations II 类似)</li></ol><ol id="48f9cf36-495f-4eb6-9e18-628f982bc54a" class="numbered-list" start="2"><li>lintcode K Sum II (Combination Sum类似)</li></ol><p id="6d54a705-8455-413b-ba46-fb0b8bd01532" class="">加index 因为你append到combination里的数，下一个要在上一个后面，要确保顺序 （subsets）</p><p id="416ba0d7-dae8-4f06-aaab-b0598054a16f" class="">  3. lintcode 33. N-Queens (答案看懂了)</p><p id="9de8add9-536f-4f29-bc7c-e8301c8e8828" class="">4. lintcode 680. Split String（每次向下递归时要么删除一个字符，要么删除两个字符）</p><p id="189559d5-f020-4c12-badb-1d38723c67d5" class="">5. lintcode 153. Combination Sum II</p><p id="94ed15b0-f7c5-4482-8408-da0fad8a47b8" class="">
+</p><p id="70e664ff-1603-4156-87c8-445b33a5fb89" class="">7/17 </p><h3 id="40e73691-0045-4798-91d6-d4638f6c7f8f" class="">hashmap</h3><ol id="7ddeca18-705b-476a-957e-b31315da5fa2" class="numbered-list" start="1"><li>657. Insert Delete GetRandom O(1)</li></ol><ol id="d126e136-f179-4408-a8a0-4cdec94af5d1" class="numbered-list" start="2"><li>lintcode 4. Ugly Number II (heap)？？？ 排序什么时候做的？？</li></ol><p id="fa0ebca6-0bde-4025-aec0-971592bfebbb" class="">pop第一个数：heapq.heappop(heap)</p><p id="c6886714-68de-4eb3-bb79-908888707f8c" class="">插入数：heapq.heappush(heap, val )</p><p id="c57f766e-315d-448b-9a17-e5e79e6ff33c" class="">3. lintcode 612. K Closest Points</p><p id="ba0c67bf-5684-4571-a140-2a4ac402fcb8" class="">4. lintcode 545. Top k Largest Numbers II</p><h3 id="5ef89767-2c6f-47e0-bc28-61a6cc3936f7" class="">dfs</h3><ol id="62f1eaa7-eceb-4829-87da-73a597a5737c" class="numbered-list" start="1"><li>lintcode 132. Word Search II (get a prefix first) </li></ol><ul id="62b40da3-3658-41d5-825a-ee7d82316cf0" class="block-color-red bulleted-list"><li>dfs 如果有顺序的考虑,，一定要加index来控制顺序，然后不要忘了遍历从 index 开始！！！！</li></ul><p id="3d83b5de-7321-4a8a-9452-f340b5ce5504" class="">
+</p><p id="2a2481a4-5098-49ff-9baa-74a9d53f3ac4" class="">7/18 </p><h3 id="6575a619-568f-45f5-a0f2-12fd9b59c0b4" class="">dfs</h3><ol id="dd9927df-e2f8-422a-8591-d735d3df3d3d" class="numbered-list" start="1"><li>lintcode 90. k Sum II </li></ol><p id="9febddee-dc62-4420-8102-ea4056350739" class="block-color-red">什么时候加 visited:</p><p id="d494ea3c-3057-432d-acb0-072e0540a7a1" class="block-color-red">需要避免重复的时候</p><p id="22ea577e-30a4-4e77-80a2-0b01531e692c" class="">2. lintcode 680. Split String </p><p id="9d04a633-fc72-4b09-988c-d9f3245a4697" class="">3. 121. Word Ladder II &gt;&gt;需要重写</p><h3 id="4ad0750c-431a-44c1-af75-0a423b18e212" class="">heap</h3><ol id="2025b7a3-98c7-49ed-b89e-74abf2bb9ebb" class="numbered-list" start="1"><li>134. LRU Cache</li></ol><p id="8c97e244-e4f6-4184-905b-ba2815861cb9" class="block-color-red">双向链表，node.prev node.next都是相对于node来说的，所以在插入点应该这样：</p><p id="6f155d58-36ec-4040-921a-47befe22ba68" class=""> unknown&lt;—&gt;tail 中插入node</p><pre id="186d4fdd-7ca8-441f-97f5-e2af1fee17ab" class="code"><code>node.prev = tail.prev
+tail.prev = node
+node.prev.next = node
+node.next = tail</code></pre><p id="bb7eccbf-460e-4e23-aa61-c247240fe2a2" class="">2. lintocde 104. Merge K Sorted Lists </p><p id="e5af96a3-7612-4ead-9251-4a1f9942b14e" class="">3. lintcode 685. First Unique Number in Data Stream 明天写！！！</p><h3 id="fd531149-1d98-4c50-9912-666b8f0627c0" class="">hashmap</h3><ol id="f7ed5fe3-a597-4ab6-8528-4aabe63bc064" class="numbered-list" start="1"><li>lintcode 657. Insert Delete GetRandom O(1)</li></ol><p id="ae766ae8-02c3-4c17-94f3-51a9006d6af5" class="">nums用来存数， pos是dictionary用来存 每个val的position. key is val, value is index</p><p id="fb22c80c-233f-4558-973d-ee60c5a30553" class="">
+</p><p id="1bd683db-8195-42ea-96ed-a21dd8f77ad2" class="">7/19 </p><h3 id="9592c13b-b104-4036-b873-6fc7542d6411" class="">dfs</h3><ol id="f11a884b-0c4a-4685-9d22-da7636a5810d" class="numbered-list" start="1"><li>lintcode 121. Word Ladder II</li></ol><ol id="afb49f7b-c742-490f-8c4b-06b8b53eb4dd" class="numbered-list" start="2"><li>lintcode 829. Word Pattern II (?????)</li></ol><ol id="870312de-ed1b-4d1e-b942-c44cd9ad92ae" class="numbered-list" start="3"><li>lintcode 152. Combinations</li></ol><p id="9f1a6ee6-9d06-4867-925e-38b9fbfb0e3f" class="">bfs &gt; get distance.</p><p id="77f46876-9ba2-41a1-99c3-55020bea6254" class="">dfs &gt; in</p><p id="621f17fa-f83c-4a35-89a3-844e67ded2a6" class="">get_next_word</p><h3 id="db042639-b874-4711-ae54-44669ee9ac55" class="">heap</h3><ol id="47dc6ea6-b232-442e-b1e9-87ceb4d93f62" class="numbered-list" start="1"><li>lintcode 685. First Unique Number in Data Stream </li></ol><p id="e4100eb9-c065-4752-b99d-84538c66b69c" class="">双向链表初始化：</p><pre id="c59f4760-7323-4511-b93e-85d2eee6f6dd" class="code"><code>def __init__(self):
+        self.head = Node(0)
+        self.tail = Node(0)
+        self.head.next = self.tail
+        self.tail.prev = self.head
+        self.hash = {}</code></pre><p id="d3d625da-ce82-4191-9eaf-6d54ebca5e9f" class="">遍历nums里的数，如果这个数不在hash里，则加到最后，并在hash里更像。如果hash里已经有了，remove node，hash[num] = none.</p><p id="88da5390-d62c-4c5f-a061-81ce176820d6" class="">
+</p><p id="9955b417-69a4-4bd1-a57e-793486b36dbd" class="">7/20 </p><h3 id="2b15f8a5-5064-4dfb-bc13-14c238a1b45a" class="">heap/ hash </h3><ol id="bb856190-3629-4fec-8763-afb04b0b4d50" class="numbered-list" start="1"><li>lintcode 209. First Unique Character in a String</li></ol><ol id="04717320-e309-43ee-a0ea-52c75ee9c9ce" class="numbered-list" start="2"><li>642. Moving Average from Data Stream </li></ol><p id="93afc295-898f-45f6-8bf3-554b5c104e69" class="block-color-red">使用queue. 在queue的长度==size时，queue.popleft()queue.popleft()以保证 queue不超过size.</p><p id="83482254-ad4b-4a5a-acce-0396fb8bcf52" class="">3. lintcode 545. Top k Largest Numbers II </p><p id="eb58c23e-5e0d-45bd-a7b1-5c7067bce247" class="">始终保持大小恒定为k的堆，没次新来的num和heap[0]比较</p><p id="45dcb5c1-5006-46c6-aa84-8fe68be4300f" class="">heap不是排好序的，最后还是得sort, 因为heap只能保证头是最小的</p><p id="62f61b14-3042-4d1e-890e-7515d2b20b58" class="">
+</p><p id="cbeeb3ce-718b-4c67-8810-215b7c531f63" class="">7/21 </p><h3 id="d850e930-50e5-43d5-9d2d-506d2a284621" class="">dfs </h3><ol id="48b9b4fe-69fc-471f-a4bd-a588f2cf7599" class="numbered-list" start="1"><li>lintcode 652. Factorization （？？？？？）</li></ol><ol id="75671c1b-d0c7-4287-a3b6-c6e27ca38f11" class="numbered-list" start="2"><li></li></ol><h3 id="f2226e4b-bb20-4379-aff1-8d842650fff9" class="">heap and hash</h3><ol id="0fd717e8-306f-4bb8-8aa6-c76b8fafd4f4" class="numbered-list" start="1"><li>lintcode 495. Implement Stack </li></ol><p id="2a48be28-23c7-4395-b3f5-e1716eccc15b" class="block-color-red">stack is implemented by list. push &gt; append. pop &gt; pop. </p><p id="5ce67341-5ce3-4c10-9f23-bb02fb35cf2e" class="">2. lintcode 494. Implement Stack by Two Queues</p><ul id="6ca772ce-e6f3-44c4-96e4-c544e844acb8" class="bulleted-list"><li>构造的时候，初始化两个队列，<code>queue1</code>，<code>queue2</code>。<code>queue1</code>主要用来存储，<code>queue2</code>则主要用来帮助<code>queue1</code>弹出元素以及访问栈顶。</li></ul><ul id="0b8d575f-4549-446f-a40a-8973edf6c8b8" class="bulleted-list"><li>push：将元素推入<code>queue1</code>当中。</li></ul><ul id="e72a911c-49c0-45fb-8891-6aa2442d00d1" class="bulleted-list"><li>pop：注意要弹出的元素在<code>queue1</code>末端，故将<code>queue1</code>中元素弹出，并直接推入<code>queue2</code>，当<code>queue1</code>只剩一个元素时，把它pop出来，并作为结果。而后交换两个队列。</li></ul><ul id="e7968434-ebfd-415e-a819-775859417d5b" class="bulleted-list"><li>top：类似pop，不过不扔掉<code>queue1</code>中最后一个元素，而是把它也推入<code>queue2</code>当中。</li></ul><ul id="53290eec-5cc0-4820-baec-8dc5421a24ed" class="bulleted-list"><li>isEmpty：判断<code>queue1</code>是否为空即可。</li></ul><p id="9dc111e5-2281-40f9-96f4-f8373ecbf61e" class="">3. lintcode 40. Implement Queue by Two Stacks</p><p id="c3bcf8ce-0246-46aa-bd2b-98b49e00e722" class="">初始化两个 stack. every time append to stack1. when stack2 is empty, pop stack1 to append to stack2. top and push will be implemented in stack2. </p><p id="68f79169-8023-4dc7-9c1e-beb1158f2761" class="">4. lintcode 544. Top k Largest Numbers</p><p id="c069e143-d915-4cf4-9818-8189c53b051f" class="">
+</p><p id="fe837b7c-c730-4b0e-bd46-2d5636b1736b" class="">7/22 </p><h3 id="3ddabf13-1656-4c41-bf46-5a977d6d822d" class="">dfs</h3><p id="eaf25d50-7f43-4b8a-9e20-8fbd2287ff71" class="">1. lintcode 427. Generate Parentheses</p><p id="c6709227-0669-4a6e-a762-8aa27eff7af7" class="">when to add &#x27;(&#x27; ? when to add &#x27;)&#x27; ?</p><h3 id="8ba60563-63d2-414b-a10d-ca2bf6ccb1d2" class="">dp</h3><ol id="0aa911fc-48ef-4eba-9ed9-4f6e1e6bdd15" class="numbered-list" start="1"><li>669. Coin Change</li></ol><p id="ca097e11-508c-4551-8dab-f65d3343ec26" class="">背包问题，自下向上求解。</p><p id="d490cfc0-a42b-460b-8653-e85f4499c342" class="">因为要求dp[28],所以数组长度得是29（n+1).  初始条件：dp[0] = 0</p><p id="1bec15ee-ac1b-4c57-a01a-5d196fcef916" class="">状态转移方程：dp[i] = min(dp[i], dp[i - coin] ). coin = 2, 3, 5</p><p id="668086a4-8a63-471a-bbba-d20a666dfb5f" class="">2. 116. Jump Game</p><p id="5554f388-888a-4c30-9596-45e180816670" class="">自下而上求解</p><p id="63bd24be-cca6-4544-9d77-23f6d430c2f3" class="">要求dp[len(nums) - 1], 所以数组长度len(nums).初始条件：dp[0] = true</p><p id="b0e7c62e-21c8-4442-b4c9-f85c199e6854" class="">状态转移方程： if dp[j] and nums[j] + j ≥ i: dp[i] = True</p><h3 id="45502683-822b-437b-8e85-75793572d1b4" class="">array</h3><ol id="0af20cee-f135-4013-a5c5-55f0486a964a" class="numbered-list" start="1"><li>196. Missing Number</li></ol><p id="ac74a028-ee06-43fe-9e9d-070c4e355588" class="">判断数组长度，然后用求和公式求出应该的sum, 再- </p><h3 id="bf923509-a08d-4be5-a15e-622f5bec7f01" class="">tree</h3><ol id="666ec57a-9afe-4ed4-ad4c-230907ef0dba" class="numbered-list" start="1"><li>lintcode 596. Minimum Subtree</li></ol><p id="a6d10d93-8868-43b8-adb2-a88ea890354e" class="">7/23 </p><ol id="2ef61176-536a-4817-ab7c-1074133af6a2" class="numbered-list" start="1"><li>lintcode 125. Backpack II</li></ol><figure id="78bf41de-1337-41e7-82ce-75258d67f300" class="image"><a href="7 14 8 14/Untitled.png"><img style="width:1904px" src="7 14 8 14/Untitled.png"/></a></figure><h3 id="9134b0cc-1b69-45c8-8d1d-9e4d2e255fe4" class="">dfs</h3><p id="e6677b0f-996b-48e0-a545-3004542643ab" class="">1. lintcode 652. Factorization &gt;&gt;需要重写</p><p id="2dc008db-550e-41fa-8180-b7c2dc38bdb9" class="">2. lintcode 192 wild card &gt;&gt;buhui</p><p id="caa51705-a76c-433e-be25-6b84cd45d5ea" class="">
+</p><p id="61f7ebbd-4251-41fb-8a4d-d27947144b42" class="">7/24 </p><h3 id="661b20f7-2adc-451a-9184-fa971fc0cb04" class="">dfs </h3><ul id="2188f99a-115a-4a63-a4d2-a826db3777fe" class="bulleted-list"><li>dfs1 2 视频看完</li></ul><ol id="80697930-eef3-4eb4-89bb-2de3c71beccd" class="numbered-list" start="1"><li>dfs &gt;&gt;看视频</li></ol><ol id="5da7de0a-68dd-413d-b185-1e080f653f15" class="numbered-list" start="2"><li>lintcode 93. Balanced Binary Tree (o(n))</li></ol><ol id="8d7218ea-6da2-4caf-bed1-63c7fce2532e" class="numbered-list" start="3"><li>lintcode 67. Binary Tree Inorder Traversal (stack,永远把左边的node加进stack)</li></ol><ol id="d09f79e2-ce7b-4528-a743-80f93ddd0375" class="numbered-list" start="4"><li>lintcode 94. Binary Tree Maximum Path Sum</li></ol><ol id="b860c5e7-58d3-4386-a79f-c0bed0f96fc5" class="numbered-list" start="5"><li>leetocde 113. Path Sum II  lintcode 376. Binary Tree Path Sum</li></ol><p id="c142b527-25cd-4cb6-b106-4de7ca439cc8" class="">when to pop ?</p><p id="7af893ba-00ab-4621-aa92-519610c3150c" class="">6. lintcode 475. Binary Tree Maximum Path Sum II </p><p id="0c74f546-c005-4ac5-a110-8222886cd29e" class="">7. lintcode 246. Binary Tree Path Sum II</p><p id="af89c7de-4b35-4243-836d-e8600f994f7a" class="">
+</p><p id="5b354ba2-83a2-415a-bd05-6ccb8f7adc26" class="">7/25 </p><p id="3ee119ed-e052-4946-9755-215016fa687c" class=""><strong>tree path summary:</strong></p><ol id="f7743e85-713a-478e-957c-b9a400e4798c" class="block-color-teal numbered-list" start="1"><li>from root to leave: lintcode 376</li></ol><p id="63c51db7-b0a4-4086-86cb-06b3fa840253" class="">思路是 dfs, backtraking. 注意的是得在if not root.left and not root.right的时候append path.</p><p id="57c33128-4552-433e-8bd6-f6faea51c28d" class="block-color-teal">2. from root to any node 求 max path sum: lintcode 475</p><p id="06f2d07d-97d9-4b52-97f9-718a743ddcd9" class="">return max( max(left, 0), max(right, 0) + root.val </p><p id="c4724c60-ee99-40f3-854d-f2c7196c8f58" class="block-color-teal">3. from one node to any node: lintcode 94</p><p id="ea299c5a-06be-4d37-9c75-b2aa465f6af5" class="">update max with max(left, 0) + max(right, 0) + root.val</p><p id="d35847bd-5236-40b6-b58b-abc3961df136" class="">return max( max(left, 0), max(right, 0) + root.val </p><p id="c618c2e2-6c57-452e-9638-79a203acbd40" class="block-color-teal">4. from one node to another node., get the path sum == target,  but should be a single path: lintcode 246</p><p id="756421ba-9ac3-4c05-95a8-8497385dc9d4" class="">思路是double dfs. 从root 开始遍历，每一个node dfs, 求出往下的path sum. if sum == target. add path.一直遍历到leaf. root遍历完后，(like lintcode 376) 再遍历 root.left, root.right</p><p id="250332ea-ca02-4dff-9ade-fd210a45429a" class="block-color-teal">5. from one leave to another leave:</p><p id="adf32a54-334e-4d8d-962e-5a2f5984ce26" class="">if root.left and root.right:<div class="indented"><p id="8699c6c7-7706-4496-951e-142c4100e2a5" class="">update max with (left + right + root.val)</p></div></p><p id="59919cfe-aadd-46d2-aa52-33645644e1ca" class="">return max(left, right) + root.val</p><p id="933c48b3-a3b9-4d33-8cae-d1ef3048b306" class="block-color-red">for any node problem, compare val with 0 to determine whether to return this val.</p><p id="5a1856bb-0f32-4f3c-891a-479cbdb6c5cc" class="block-color-teal">6. 472. Binary Tree Path Sum III &gt;&gt; 4 的 follow up</p><p id="a94983f9-c941-4454-8a0a-0f52b8513af5" class="">双重dfs,但是需要加一个prev_node, or will be endless recursion. 4 &gt; 2 then 2&gt;4 then 4 &gt; 2....</p><p id="70a649c1-9211-4e21-9ec8-5b476d259026" class="">
+</p><p id="cb5a3edb-114d-47a5-987f-79ffa63c2e7e" class=""><strong>tree deserialization summary</strong></p><p id="e5642521-8c93-4d9b-b005-2158120b7266" class="">此类</p><ol id="8967f563-3d92-4dc8-94ea-e89186198a9b" class="numbered-list" start="1"><li>72. Construct Binary Tree from Inorder and Postorder Traversal</li></ol><ol id="cb66f5a5-1235-401a-af4f-c8cdc1ada8f3" class="numbered-list" start="2"><li>leetcode 1008. Construct Binary Search Tree from Preorder Traversal</li></ol><ol id="de91432b-c084-49cc-8ed8-2b39edb3f953" class="numbered-list" start="3"><li>889. Construct Binary Tree from Preorder and Postorder Traversal （！注意out of index）</li></ol><ol id="49f26ecf-f52c-4d43-931e-dfdcdc02d963" class="numbered-list" start="4"><li>(重点)视频里的 constrcut binary tree from inorder traversal and level order traversal</li></ol><figure id="0296d0f3-ede6-46c9-9039-c2477e8c1796" class="image"><a href="7 14 8 14/Untitled 1.png"><img style="width:1182px" src="7 14 8 14/Untitled 1.png"/></a></figure><figure id="00496b70-b991-4660-a58c-6c6945de7267" class="image"><a href="7 14 8 14/Untitled 2.png"><img style="width:1212px" src="7 14 8 14/Untitled 2.png"/></a></figure><p id="63b1fcd2-2380-48b3-b2f3-ec0143664e04" class="">
+</p><p id="66c22e1b-1689-444b-aecf-652d634c85a5" class="">
+</p><h3 id="ce12f01f-3d06-400d-b4ec-c17a586195bf" class="">dp</h3><ol id="94dbbf7c-c807-4cdc-9d28-c2783cdeca98" class="numbered-list" start="1"><li>674. Longest Continuous Increasing Subsequence</li></ol><p id="077a7424-f83f-430d-86f1-d9f256af8f9f" class="">
+</p><p id="6afe0323-524f-4892-a444-c5c84ccb7a49" class="">7/26</p><h3 id="ebf37a1c-de88-465c-b8f6-07e43f55333d" class="">dp </h3><p id="828ffe3a-2089-4b25-acb8-54dcb12966ed" class="block-color-red">看dp1,   总结说的几个题：(linear scan一个个切的方法)</p><ol id="1fe83677-2e33-4ab7-9fd2-dba243aecef0" class="numbered-list" start="1"><li><strong>longest Continuous Increasing Subsequence</strong></li></ol><p id="24024a91-3af0-4690-b835-f4ab492a5a1a" class="">base case: m[0] = 1</p><p id="af269475-5de2-4dbe-b15f-976fbf0e6966" class="">dp intuition: if input[i] &gt; input[i - 1]: m[i] = m[i - 1] + 1. else: m[i] = 1</p><p id="24664a2a-baae-4b23-8587-f5f00089e311" class="">return: max(m)</p><p id="5605fdf6-3233-45cd-b2ae-a8373823a190" class="">2. <strong>maximum product when cutting rope</strong>  — | —  1 * 1 = 1</p><p id="b58d13ab-a101-4de8-b779-2334294fe4e3" class="">base case: m[1] = 0 invalid (cut the 1 meter rope)</p><p id="a6575f04-cf2a-4f4a-9139-7a7d4f9f639a" class="">rule: (每次看切的左边是继续切还是直接用。 右边的部分直接用)</p><figure id="e9b9b78d-df55-46fb-9360-df0b64b6c29d" class="image"><a href="7 14 8 14/Untitled 3.png"><img style="width:1324px" src="7 14 8 14/Untitled 3.png"/></a></figure><p id="c69b85ec-feb2-491f-b99c-c32d8001fc6f" class="">3. <strong>lintcode 107 word break </strong></p><p id="6b336a0b-276c-4b49-bf8c-3f6fb2cc7434" class="">从左边开始切，每次看左边是否继续切，右边直接check in dict.</p><p id="8c6a0cba-d61b-4b78-8d23-a9caa7bf9859" class="">优化： 每个size切时， 限制切开始的位置。不一定非要从0的位置开始。右边查字典的string一定≥字典里最长的word的地方开始就可以</p><p id="11132799-9f20-4b52-b2bb-5f5610bfc090" class="">
+</p><figure id="dbb3e0e3-9e73-44dc-a2ed-6a529954ed1c" class="image"><a href="7 14 8 14/Untitled 4.png"><img style="width:1396px" src="7 14 8 14/Untitled 4.png"/></a></figure><p id="1cb2fbb5-482e-45aa-807c-47e8c9002626" class=""><strong>4. lintcode 116. Jump Game</strong></p><pre id="2ff858eb-1d92-46ba-b5c7-d8707f91f5c4" class="code"><code>def canJump(self, A):
+        # write your code here
+        #from last stone to the first stone
+        if not A:
+            return False 
+        n = len(A)
+        dp = [False] * (n)
+        dp[n - 1] = True
+        for i in range(n - 2, -1, -1):
+            for j in range(i + 1, A[i] + i + 1):
+                if dp[j]:
+                    dp[i] = True
+                    break
+        return dp[0] </code></pre><p id="acce4baf-ae73-4c6b-bb7e-802bc78a1a53" class=""><strong>5. lintcode 117. Jump Game II</strong></p><p id="84bfeebb-af25-466a-95c0-09f53c4174e3" class="">思路都是从后向前，两重循环，每次更新当前的石头的情况， 根据能够到的后面的石头的情况</p><p id="746e543c-8ff1-4098-96e9-571bb2a693aa" class="">
+</p><p id="f1bd17ac-539d-4d03-8e46-047dce34fa62" class=""><strong>6. largest sum of subarray</strong></p><p id="4ea3d014-3e6f-497a-b5be-c8dcd296a897" class="block-color-red">另起炉灶 or 继承  </p><figure id="fcc1661f-a9ba-45a8-b7a3-27e4abb02698" class="image"><a href="7 14 8 14/Untitled 5.png"><img style="width:1478px" src="7 14 8 14/Untitled 5.png"/></a></figure><p id="3d97b204-5a64-4527-9b07-b4cca108ec96" class=""> follow up: how to return the left-right border of the solution</p><p id="eac55622-c2d8-4501-ae0d-21d19cb8cbbf" class="">记录三个index: </p><p id="5d7709f9-b03e-459f-b004-7d07428dddac" class="">
+</p><p id="e233b6bd-1f73-4c3a-bf00-01d56a630817" class="">二维dp:</p><ol id="8ed2a007-2b39-49b4-9522-c18c5d1d6ad6" class="numbered-list" start="1"><li><strong>lintcode 119. Edit Distance  &gt;&gt;需要重写</strong></li></ol><figure id="61386699-9a11-4fed-8044-893605423e68" class="image"><a href="7 14 8 14/Untitled 6.png"><img style="width:1384px" src="7 14 8 14/Untitled 6.png"/></a></figure><p id="94a4141e-1dbe-4dc3-987e-91094e28c8ca" class="">
+</p><p id="7627c5e3-2e08-4273-8f8a-d41c6a7893b2" class="">7/27 </p><h3 id="450d683d-dfbc-4b7c-9477-2a5bf9b8db0a" class="">dp</h3><ol id="295cab25-4c28-4047-a367-58d58305ed70" class="numbered-list" start="1"><li>edit distance （why word1[i-1] == word2[j - 1]?）</li></ol><p id="74c714f4-ba9c-4425-a9e5-9244428f3764" class="">ij并不是指index，而是指他是第几个数，数组是从0开始的，ij的0是指word1 或者word2的长度为0，因此要减1</p><p id="c371d539-a58b-452c-95b9-0d821ca990b1" class="">
+</p><p id="e70b3719-2ce3-40ee-8090-d78d314d173c" class=""> </p><h3 id="5f8b3922-2451-4b95-8fab-0b643a605cb9" class="">tree</h3><ol id="8766d9e6-2b76-432d-818a-be90b4f867f2" class="numbered-list" start="1"><li>95. Validate Binary Search Tree 非常重要！！！！</li></ol><p id="d58e9dd4-64a4-4b7f-8c4f-7ad27557e718" class="">divide and conquer: set the bound for each subtree. If beyond, false.Start with system max and min.Update max value for left subtree with root value.Update min value for right subtree with root value.Return true when both sides are true</p><p id="f35e899a-05cb-4d71-9ab9-f1d668c93759" class="">
+</p><p id="d1096e2b-01c7-486d-8a0f-2a35d2585e63" class="">7/28 </p><ol id="1b9bfb53-6984-4137-82e7-39143ca72b47" class="numbered-list" start="1"><li>lintcode 109. Triangle</li></ol><ul id="19ea1109-eb9f-4b7e-8a11-0b6e94972eca" class="bulleted-list"><li>初始化数组</li></ul><ul id="2055a034-67ee-4016-b232-ff2701999102" class="bulleted-list"><li>初始化最后一层</li></ul><ul id="d3fd8cc6-2f1f-4af0-b505-5694a93405ae" class="bulleted-list"><li>dp[i][j] = min(dp[i + 1][j], dp[i + 1][j + 1]) + triangle[i][j] dp[i][j]表示从i,j到bottom的最短距离</li></ul><ul id="ed0b33e9-098a-49e9-bfaa-df73adf0dc62" class="bulleted-list"><li>return dp[0][0]</li></ul><p id="76d463f3-4048-4fef-8fc9-7b33ac94ae25" class=""><mark class="highlight-red"><strong>三种求最大subsequence总结： </strong></mark></p><ol id="9e30a26a-2815-4899-b910-4a714cf6ee8c" class="numbered-list" start="1"><li>longest Continuous Increasing Subsequence</li></ol><p id="cdfa8e02-e5ac-46be-97e6-d3ec35e6123b" class="">如果前面 &lt; 后面，dp[i] = dp[i - 1] + 1 else: dp[i] = 1. return max(dp)</p><ol id="52feec9d-1094-4811-8c1d-cdd5ac181706" class="numbered-list" start="1"><li>lintcode 397. Longest Continuous Increasing Subsequence</li></ol><p id="b2af04ee-f9ad-4b59-a2e1-e58d7c4526d3" class="">定义dp1, dp2,一个保存increasing，一个保存desending计算最大的上升连续子序列，如果相邻的不满足条件，则从头开始计算</p><ol id="735d25e4-e647-4abb-ae3d-85d008459793" class="numbered-list" start="1"><li> lintcode 76. Longest Increasing Subsequence</li></ol><p id="4b9cc25c-1dab-4618-8eed-21aa0c8b0165" class="">Dp[i] 表示以第i个数字为结尾的最长上升子序列的长度。对于每个数字，枚举前面所有小于自己的数字 j，Dp[i] = max{Dp[j]} + 1. </p><p id="74c5e099-c227-4f1f-89d7-efbcf1f4c8b3" class="">
+</p><p id="fc2b9f5b-9465-418f-ac6f-eb3e18405a0c" class=""> 7/29 </p><h3 id="92a89334-3b38-4c82-80f2-35fa30edc997" class="">dp </h3><p id="b7adff33-a762-4473-ab64-6c1e7ae4e45a" class="">不仅求最大还要打印方案，用一个数组prev储存每次dp[i]的最优值从哪里来的，最后从后向前遍历，找到prev ==-1 时停止。</p><ol id="03906e85-f268-4e57-8e50-95f357367c03" class="numbered-list" start="1"><li>603. Largest Divisible Subset</li></ol><p id="b5b6816d-e7ed-4301-a3a6-e183c016088d" class="">
+</p><ol id="92fe4f05-9166-4a50-9cfb-2405085c8056" class="numbered-list" start="1"><li>滚动数组学习</li></ol><ol id="047f1f9a-e655-4e4f-a17c-f7eeccf443f4" class="numbered-list" start="2"><li>tree2学习</li></ol><h3 id="bad630bb-6a81-45dd-9ab2-b73f05cdf6b1" class="">tree</h3><ol id="3c124176-be9d-4fb8-9a91-2b34eb8cb7bc" class="numbered-list" start="1"><li>450. Delete Node in a BST （非常重要！）</li></ol><p id="1c76fd72-2def-442b-a1ce-40f1a377cc56" class="">steps:</p><ol id="98f7249f-5152-4f2f-b759-d50318633320" class="numbered-list" start="1"><li>Recursively find the node that has the same value as the key, while setting the left/right nodes equal to the returned subtree</li></ol><ol id="936b7522-164a-4566-be15-7c2369463f69" class="numbered-list" start="2"><li>Once the node is found, have to handle the below 4 cases</li></ol><ul id="92bfa763-f60e-47ed-a69e-62fec6272d53" class="bulleted-list"><li>node doesn&#x27;t have left or right - return null</li></ul><ul id="59e118d0-d78e-44f0-99e6-ba9f43ef7656" class="bulleted-list"><li>node only has left subtree- return the left subtree</li></ul><ul id="59918900-6d3f-4835-9d0a-a9efd96b094f" class="bulleted-list"><li>node only has right subtree- return the right subtree</li></ul><ul id="b0fcfe98-a7bc-4312-b911-ad5db4b0177e" class="bulleted-list"><li>node has both left and right - find the minimum value in the right subtree, set that value to the currently found node, then recursively delete the minimum value in the right subtree</li></ul><h3 id="0da04c8b-2fe1-415e-a6d4-2bcf013fce00" class="">linkedlist</h3><ol id="d5e6805e-e8e1-4bea-8912-c5695ed93b76" class="numbered-list" start="1"><li><mark class="highlight-red">219. Insert Node in Sorted Linked List</mark></li></ol><p id="cdbd46d7-e04f-4afb-96f8-8f51f039d6ad" class="">   先检查prev 和val 大小， find the last element &lt; val， insert</p><p id="e50d6318-4cba-493c-bd6e-eac7e7e0435f" class=""><mark class="highlight-red">2. 599. Insert into a Cyclic Sorted List</mark></p><p id="6f907baf-6683-459d-b343-5a15cc066070" class="">find the tail and head first, check the  tail and head with x, insert</p><p id="b461ea47-f30a-4d4a-9d26-1af62ed3d2df" class=""><mark class="highlight-red">3. 165. Merge Two Sorted Lists（重写）</mark></p><p id="8285db12-13d1-4c7e-8cd4-00bc2d71b4fe" class=""><mark class="highlight-blue">dummy = ListNode(0)
+tmp = dummy</mark></p><p id="d23bd752-4c48-4a41-b298-e8b93f06969b" class=""><mark class="highlight-red">4. 96. Partition List</mark></p><p id="cf75165b-2c80-4569-ba90-1c1985e23b49" class="">5. 167. Add Two Numbers</p><p id="9b664d16-6482-47e2-9ec4-27581544ddf8" class="">6. 221. Add Two Numbers II</p><p id="2a0aa084-b9f3-4b14-b2ac-302ffb3e2abe" class="">7. leetcode 234. Palindrome Linked List</p><p id="92b517ef-abff-4f82-a3eb-97eb6ddd29a6" class="">
+</p><p id="0f8a82fc-ad56-4974-a9cb-fc4ce75eecea" class="">
+</p><p id="dc236cbb-0ffa-4337-9525-49e4b1752cc5" class="">7/30 </p><h3 id="a05bddcf-d2de-4c12-b0b2-428e52cad21b" class="">dp</h3><ol id="8b61a791-3889-4292-87e8-ae7ffee784b7" class="numbered-list" start="1"><li>602. Russian Doll Envelopes (重写)</li></ol><p id="16987fdd-baee-4e75-b95d-85d4090a5ab6" class="">bisect</p><p id="44f0a7a4-7f10-479f-a8c3-e76860d9054d" class="">
+</p><p id="9fa047d1-3685-468a-a2ba-ca3822358e0a" class="">8/ 2  </p><ol id="eb6981ac-ec62-4a63-853b-342f76d840b2" class="numbered-list" start="1"><li>lintcode 12. Min Stack</li></ol><ul id="b7f80b76-8749-40a6-8291-559d1c1c6bfe" class="bulleted-list"><li><code>push</code> 直接把元素压入 stack, 对于 minStack, 如果它为空则直接压入, 反之压入当前元素与 minStack 栈顶的最小值</li></ul><ul id="0d236bef-34de-4427-a39a-43bff817bb34" class="bulleted-list"><li><code>pop</code> 两个栈都弹出一个元素, 返回 stack 弹出的元素</li></ul><ul id="3e67cda3-c721-448c-973d-98a515932368" class="bulleted-list"><li><code>min</code> 返回 minStack 的栈顶</li></ul><ol id="6fbc7cde-1954-4e96-8ec8-106702cceb5e" class="numbered-list" start="1"><li>lintcode 229. Stack Sorting</li></ol><p id="2250a099-2938-4286-b173-68c5d36ddca5" class="">从原来栈不断pop数字；从一个新栈记录pop出的数字， 新栈大的数在栈底，小的在栈顶；如果pop出来的数字比新栈的栈顶大，为了使之沉底，把新栈所有比它小的都pop出来扔回原栈。然后该数入新栈。</p><p id="21955ef5-a678-44cb-8496-5cb2d26939f5" class="">
+</p><p id="e78e62a2-1c98-4518-be73-774d86c3af5e" class="">
+</p><p id="ed44c13a-7b78-4fa2-a91b-de1a463aad0b" class="">8/6 </p><ol id="d067588b-f3d2-430b-9b4c-73701f56cec1" class="numbered-list" start="1"><li>heap</li></ol><p id="5accfa60-d255-4a4c-9d45-39883404f9e6" class="">544. Top k Largest Numbers</p><p id="0fb5721e-f13a-41f2-9265-2bfdf03addfc" class="">
+</p><figure id="7a3bc285-e880-4930-8c8a-1cc0058df347" class="image"><a href="7 14 8 14/Untitled 7.png"><img style="width:1280px" src="7 14 8 14/Untitled 7.png"/></a></figure><p id="c9351a73-8af8-4b64-b5b9-08bdf4960cd4" class="">
+</p><p id="3a3b91de-ba8f-4f09-b1e3-a6d69f1a9f5a" class="">8/7 </p><ol id="4453358c-a5fb-4cc9-b8e4-2c450f45a727" class="numbered-list" start="1"><li>lintcode 120. Word Ladder</li></ol><ol id="eab2b8f2-d222-461f-8ed2-c78149dd50c2" class="numbered-list" start="2"><li>lintcode 794. Sliding Puzzle II</li></ol><ol id="0c12d053-5d21-4230-bee9-684bc8d63284" class="numbered-list" start="3"><li>460. Find K Closest Elements</li></ol><ol id="f372eb9e-8f0e-4023-a431-37dd7caab407" class="numbered-list" start="4"><li>104. Merge K Sorted Lists</li></ol><ol id="4792c8ba-70b4-4b4b-8672-3235f9701cbc" class="numbered-list" start="5"><li>Kth Largest Element II</li></ol><p id="97e0e9df-42ad-451a-95ac-441602ee3aae" class="">8/8 </p><ol id="cf9eccdb-1c68-4048-8fb2-745d19893a77" class="numbered-list" start="1"><li>lintcode 104. Merge K Sorted Lists </li></ol><ol id="455e13d7-99f7-46e4-a953-c637f9963546" class="numbered-list" start="2"><li>lintcode 64. Merge Sorted Array</li></ol><ol id="468b961d-e4d2-420c-af5d-b2ae461c9d0a" class="numbered-list" start="3"><li>lintcode 156. Merge Intervals</li></ol><ol id="1ad60cfa-7625-4014-aa85-49f94bdc68f0" class="numbered-list" start="4"><li>lintcode 577. Merge K Sorted Interval Lists</li></ol><ol id="6a2a1175-313c-445b-a690-94c111ea6664" class="numbered-list" start="5"><li>lintcode 839. Merge Two Sorted Interval Lists</li></ol><p id="3b221129-0bf7-42cb-85b0-9e9263559369" class="">8/9</p><ol id="b75c441a-fdd6-4bdc-8adf-070e06dcc859" class="numbered-list" start="1"><li>lintcode 135. Combination Sum</li></ol><ol id="af20a436-b391-4b91-92a1-2088fd6e0264" class="numbered-list" start="2"><li>lintocde 17. Subsets</li></ol><ol id="799318ac-24b3-4fcb-aa5a-28e5296c034b" class="numbered-list" start="3"><li>lintcode 15. Permutations</li></ol><ol id="0283201b-4449-4f10-832e-b2b21c2deff0" class="numbered-list" start="4"><li>lintcode 591. Connecting Graph III</li></ol><ol id="4979e272-750f-46ba-b0c0-280be66a7e0c" class="numbered-list" start="5"><li>lintcode 434. Number of Islands II</li></ol><p id="b6eb32d7-d693-4c1b-85a9-b717e1d30dbc" class="">
+</p><pre id="df70a011-3482-4710-ba1b-7897275a018e" class="code"><code>def union(self, a, b):
+root_a = self.find(a)
+root_b = self.find(b)
+if root_a != root_b:
+self.father[root_a] = root_b
+self.size -= 1
+return</code></pre><pre id="23ecfbb7-0a81-4497-8a76-6f3d2edc1302" class="code"><code>def find(self, a):
+    path = []
+    while a != self.father[a]:
+        path.append(a)
+        a = self.father[a]
+    for node in path:
+        self.father[node] = a 
+    return a</code></pre><p id="0aa95a9e-2087-40d5-a676-965c4738be86" class="">
+</p><p id="78e2b1a2-99e9-45d2-a57d-7715ca43a0a1" class="">8/10 </p><ol id="ac6c0bbf-b777-456f-a132-36497f561264" class="numbered-list" start="1"><li>lintcode 625. Partition Array II</li></ol><ol id="70e2f03a-91aa-412c-86b0-2eb9048a10be" class="numbered-list" start="2"><li>lintcode 148. Sort Colors</li></ol><ol id="f4f861f1-f9db-448f-be9a-cfa5c2a1a687" class="numbered-list" start="3"><li>lintcode 1001. Asteroid Collision</li></ol><ol id="4399f0a1-b7f7-4c27-b1f1-8bd0b7f64076" class="numbered-list" start="4"><li>lintcode 570. Find the Missing Number II</li></ol><ol id="7ee88534-4c9a-42db-aba5-54ac4fe8861e" class="numbered-list" start="5"><li>lintcode 551. Nested List Weight Sum</li></ol><p id="d31c4841-eb35-42f8-835e-6c4ec061a48f" class="">
+</p><p id="2db14088-a2d3-4e6f-8be5-98b2b36416cc" class="">8/11 </p><ol id="3a01a137-b53d-4dd1-bbb9-8108f5b524d8" class="numbered-list" start="1"><li>lintcode 41 Maximum Subarray</li></ol><ol id="601d0656-8836-488f-93bd-887149ff98b4" class="numbered-list" start="2"><li>lintcode 44. Minimum Subarray</li></ol><ol id="beebeb94-0939-429f-8d37-6ade3293f983" class="numbered-list" start="3"><li>lintcode 868. Maximum Average Subarray </li></ol><ol id="eecd45f6-ff25-41c4-9156-a8ee5b4bdba0" class="numbered-list" start="4"><li>lintcode 829. Word Pattern II</li></ol><ol id="f141b9ac-24ce-4d22-83de-579b98530fe6" class="numbered-list" start="5"><li>lintcode 974. 01 Matrix</li></ol><p id="16bcfd1d-304c-48cd-b60f-f5ea706293f2" class="">
+</p><p id="57559522-e1ed-4a50-8447-022afa3e40f4" class="">8/12 </p><ol id="94504f64-26fa-475d-89d2-f6817e49d0b1" class="numbered-list" start="1"><li>lintcode 1032. Letter Case Permutation</li></ol><ol id="310e7907-03f6-41cc-9144-3a6a472b9792" class="numbered-list" start="2"><li>lintcode 617. Maximum Average Subarray II</li></ol><ol id="cb2b14e7-ae9d-4efd-a452-11df66c471ac" class="numbered-list" start="3"><li>lintcode 425. Letter Combinations of a Phone Number</li></ol><ol id="d8397b2c-452b-4662-8cf9-ca3f8f5e44dc" class="numbered-list" start="4"><li>lintcode 647. Find All Anagrams in a String</li></ol><ol id="4fd34ae1-74ac-4dec-bb93-cf29a212edcf" class="numbered-list" start="5"><li>lintcode 1169. Permutation in String</li></ol><ol id="f77ab198-924a-4238-b72d-e6cd30f41716" class="numbered-list" start="6"><li>lintcode 1062. Flood Fill</li></ol><p id="822b4150-5e7a-4738-a5d6-983aec66551c" class="">
+</p><p id="f299a923-912c-4227-9dcd-e91af594d643" class="">8/13 </p><ol id="892d3cdb-9c42-48a0-a8db-ac2dfe5bf8e9" class="numbered-list" start="1"><li>lintcode 75. Find Peak Element</li></ol><ol id="7842d903-ef8f-4895-8d32-cc1e786698f5" class="numbered-list" start="2"><li>lintcode 183. Wood Cut</li></ol><ol id="05e83241-e323-49a5-a099-1909639905b8" class="numbered-list" start="3"><li>lintcode 607. Two Sum III - Data structure design</li></ol><ol id="1944934e-04f8-48c4-bfd7-d488f0e52095" class="numbered-list" start="4"><li>lintcode 533. Two Sum - Closest to target</li></ol><ol id="39b7e174-6df8-4683-ada7-480913a8be10" class="numbered-list" start="5"><li>lintcode 59. 3Sum Closest</li></ol><ol id="e6be29c9-7440-4802-843d-5a86e7ad1608" class="numbered-list" start="6"><li>lintcode 697. Sum of Square Numbers</li></ol><ol id="9c7fbf56-a3fd-47d4-9765-f771b273ec6c" class="numbered-list" start="7"><li>lintcode 547. Intersection of Two Arrays</li></ol><p id="209d0052-b2d2-4ff8-a0c6-3442b935fb8e" class="">
+</p><p id="1fba0e35-762b-4540-a252-0fad889d2543" class="">8/14 </p><ol id="36b2f2a6-ed94-4a70-ab7d-77a48d37c3ac" class="numbered-list" start="1"><li>lintcode 32. Minimum Window Substring</li></ol><ol id="3b6f0a38-eb16-402d-8920-92f075d2c7c1" class="numbered-list" start="2"><li> lintcode 64. Merge Sorted Array</li></ol><ol id="efc70137-c524-462b-bcf1-76e3d4db83bd" class="numbered-list" start="3"><li>lintcode 149. Best Time to Buy and Sell Stock</li></ol><ol id="dc4e4b09-d55c-4043-90a3-1ff12012a4b8" class="numbered-list" start="4"><li>lintcode 100. Remove Duplicates from Sorted Array</li></ol><ol id="418a202e-e195-4324-aa5e-e41b16d1f0e7" class="numbered-list" start="5"><li>lintcode 101. Remove Duplicates from Sorted Array II</li></ol><ol id="674a9062-5eba-4eee-b387-80db9e7dd7e9" class="numbered-list" start="6"><li>lintcode 100. Remove Duplicates from Sorted Array</li></ol><ol id="3761dd39-ff04-45a3-9fb5-ecf20bb2f4f9" class="numbered-list" start="7"><li>lintcode 628. Maximum Subtree</li></ol><ol id="389fa7af-3c71-4342-af15-e4e25dcfa8bb" class="numbered-list" start="8"><li></li></ol><p id="502237eb-327a-47df-920f-aa3a1a20d2a5" class="">
+</p><p id="8bef4c78-5789-4a44-9490-b6efc19bf62e" class="">
+</p></div></article></body></html>
