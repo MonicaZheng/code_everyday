@@ -12,3 +12,9 @@
 4. leetcode 384. Shuffle an Array,重写
 5. leetcode 695. Max Area of Island!!!count = self.bfs()
 
+10.18
+1. leetcode 983. Minimum Cost For Tickets,重写
+2. leetcode 309. Best Time to Buy and Sell Stock with Cooldown
+3. leetcode 785. Is Graph Bipartite?, bfs,重写
+4. leetcode 886. Possible Bipartition
+5. leetcode 211. Add and Search Word - Data structure design!重写 dfs
