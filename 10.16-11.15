@@ -52,3 +52,14 @@
 6. leetcode 74. Search a 2D Matrix,重写
 7. leetcode 93. Restore IP Addresses,重写！！
 8. leetcode 79. Word Search
+
+10.25
+1. leetcode 204. Count Primes
+2. leetcode 206. Reverse Linked List
+3. leetcode 450. Delete Node in a BST
+4. leetcode 722. Remove Comments, 重写
+5. leetcode 36. Valid Sudoku, index = 3 * (i // 3) + j // 3
+6. leetcode 438. Find All Anagrams in a String
+7. leetcode 523. Continuous Subarray Sum, 8. leetcode 974. Subarray Sums Divisible by K 
+9. leetcode 173. Binary Search Tree Iterator
+10. leetcode 304. Range Sum Query 2D - Immutable,重写
