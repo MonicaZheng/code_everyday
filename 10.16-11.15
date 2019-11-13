@@ -170,4 +170,11 @@
 11.12
 1. leetcode 1107. New Users Daily Count
 2. leetcode 534. Game Play Analysis III,重要
-3. 
+3. leetcode 584. Find Customer Referee
+4. leetcode 176. Second Highest Salary!重要！！！！
+5. leetcode  185. Department Top Three Salaries!!
+6. leetcode 181. Employees Earning More Than Their Managers
+7. leetcode 262. Trips and Users,重写。 ROUND((count(IF(status!='completed',1,null))/count(*)),2) AS 'Cancellation Rate'
+8. leetcode 180. Consecutive Numbers
+9.leetcode 1204. Last Person to Fit in the Elevator
+
