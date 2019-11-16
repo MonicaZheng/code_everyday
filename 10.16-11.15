@@ -202,3 +202,6 @@
 6. leetcode 1082. Sales Analysis I
 7. leetcode 1148. Article Views I
 8. leetcode 1112. Highest Grade For Each Student
+9. leetcode  138. Copy List with Random Pointer copy = Node(node.val, node.next, node.random)!!!!,注意
+10. leetcode 91. Decode Ways,注意，重写
+11.leetcode 88. Merge Sorted Array,注意，重写！
