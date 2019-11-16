@@ -205,3 +205,6 @@
 9. leetcode  138. Copy List with Random Pointer copy = Node(node.val, node.next, node.random)!!!!,注意
 10. leetcode 91. Decode Ways,注意，重写
 11.leetcode 88. Merge Sorted Array,注意，重写！
+
+11.16
+1. leetcode 380. Insert Delete GetRandom O(1)!!!!注意remove先加后删
