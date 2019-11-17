@@ -210,4 +210,6 @@
 1. leetcode 380. Insert Delete GetRandom O(1)!!!!注意remove先加后删
 2. leetcode 79. Word Search,重写
 3. leetcdoe 17. Letter Combinations of a Phone Number,重写！ define a index
-4. 
+4. leetcode 322. Coin Change, 重写
+5. leetcode 550. Game Play Analysis IV重写
+6. leetcode 139. Word Break,重写
