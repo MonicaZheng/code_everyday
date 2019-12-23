@@ -208,3 +208,44 @@
 16. leetcode 362. Design Hit Counter
 17. leetcode 93. Restore IP Addresses, if i <= len(s):!!!!!!! if not path and not s: append
 18. leetcode 6. ZigZag Conversion
+
+12.17
+1. leetcode 236. Lowest Common Ancestor of a Binary Tree
+2. leetcdoe 525. Contiguous Array
+3. leetcode 228. Summary Ranges
+4. leetcode 443. String Compression!!!!重要
+5. leetcode 449. Serialize and Deserialize BST
+6. leetcode 739. Daily Temperatures
+7. leetcode 503. Next Greater Element II
+8. leetcode 415. Add Strings
+9. leetcode 43. Multiply Strings
+10. leetcdoe 3. Longest Substring Without Repeating Characters
+11. leetcode 53. Maximum Subarray!!!
+12. leetcode 5. Longest Palindromic Substring
+13. leetcode 713. Subarray Product Less Than K
+14. leetcode 146. LRU Cache
+
+12.18
+1. leetcode 53. Maximum Subarray
+2. leetcode 297. Serialize and Deserialize Binary Tree
+3. leetcode 26. Remove Duplicates from Sorted Array
+4. leetcode 125. Valid Palindrome!!!
+5. leetcdoe 47. Permutations II
+
+12.21
+1. leetcode 53. Maximum Subarray
+2.leetcode 503. Next Greater Element II
+
+12.22
+1. leetcode 243. Shortest Word Distance,重写
+2. leetcode 244. Shortest Word Distance II!!重写 o(m+n)
+3. leetcode 339. Nested List Weight Sum
+4. leetcode 364. Nested List Weight Sum II
+5. leetcode 605. Can Place Flowers
+6. leetcdoe 146. LRU Cache
+7. leetcode 46. Permutations
+8. leetcode 47. Permutations II
+9. leetcode 380. Insert Delete GetRandom O(1)，重写。remove的时候，先replace > delete
+10. leetcode 381. Insert Delete GetRandom O(1) - Duplicates allowed!!重要
+https://www.youtube.com/watch?v=mRTgft9sBhA
+11. leetcode 20. Valid Parentheses
