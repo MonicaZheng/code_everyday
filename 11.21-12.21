@@ -249,3 +249,34 @@
 10. leetcode 381. Insert Delete GetRandom O(1) - Duplicates allowed!!重要
 https://www.youtube.com/watch?v=mRTgft9sBhA
 11. leetcode 20. Valid Parentheses
+
+12.23
+1. leetcdoe 319. Bulb Switcher
+2. leetcode 50. Pow(x, n)
+3. leetcode 34. Find First and Last Position of Element in Sorted Array
+4. leetcode 366. Find Leaves of Binary Tree，重写
+5. leetcode 297. Serialize and Deserialize Binary Tree
+6. leetcode 33. Search in Rotated Sorted Array
+7. leetcode 346. Moving Average from Data Stream,重写，self.sum
+8. leetcode 744. Find Smallest Letter Greater Than Target
+9. leetcode 101. Symmetric Tree
+10. leetcode 378. Kth Smallest Element in a Sorted Matrix,重写
+11. leetocde 387. First Unique Character in a String
+12. leetcode 78. Subsets
+13. leetcode 90. Subsets II
+14. leetcode 24. Swap Nodes in Pairs, 重写
+
+12.25
+1. leetcode 706. Design HashMap!!!!重要
+2. leetcode 156. Binary Tree Upside Down! 重写
+3. leetcode 155. Min Stack
+4. leetcode 716. Max Stack
+5. leetcode 39. Combination Sum
+if candidates[i] > target:
+                break 
+6. leetcode 161. One Edit Distance, 重写
+7. leetcode 369. Plus One Linked List,重写
+8. leetcode  341. Flatten Nested List Iterator
+9. leetcode 671. Second Minimum Node In a Binary Tree
+10. leetcode 53. Maximum Subarray
+11. leetcode 152. Maximum Product Subarray
