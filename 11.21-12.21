@@ -288,3 +288,34 @@ if candidates[i] > target:
 4. leetcode 21. Merge Two Sorted Lists
 5. leetcode 364. Nested List Weight Sum II
 6. leetcode 244. Shortest Word Distance II
+7. leetcode 243. Shortest Word Distance,重写
+8. leetcode 366. Find Leaves of Binary Tree!!!重要
+9. leetcode 605. Can Place Flowers
+
+12.27
+1.leetcode 373. Find K Pairs with Smallest Sums,重写
+2. leetcode 156. Binary Tree Upside Down,重写
+3. leetcode 254. Factor Combinations!重写
+4. leetcode 339. Nested List Weight Sum
+5. leetcode 170. Two Sum III - Data structure design!!!!重要
+6. leetcode 698. Partition to K Equal Sum Subsets
+7. leetcode 671. Second Minimum Node In a Binary Tree!!!queue
+
+12.28
+1. leetcode 912. Sort an Array
+2. leetcode 367. Valid Perfect Square
+3. leetcode 380. Insert Delete GetRandom O(1)
+4. leetcode 449. Serialize and Deserialize BST
+5. leetcode 153. Find Minimum in Rotated Sorted Array, nums[mid] 和nums[end]比较
+6. leetcode 516. Longest Palindromic Subsequence, dp重写
+5. leetcode 153. Find Minimum in Rotated Sorted Array, nums[mid] 和nums[end]比较
+7.leetcode 5. Longest Palindromic Substring
+8. leetcode 3. Longest Substring Without Repeating Characters!!!重要
+9. leetcode 153. Find Minimum in Rotated Sorted Array, nums[mid] 和nums[end]比较
+10. leetcode 739. Daily Temperatures
+11. leetcode 205. Isomorphic Strings
+12. leetcode 611. Valid Triangle Number!!重写
+13. leetcode 43. Multiply Strings, 注意cur = pos的位置！！！
+14. leetcode 2. Add Two Numbers
+15. leetcode 415. Add Strings
+
