@@ -319,3 +319,18 @@ if candidates[i] > target:
 14. leetcode 2. Add Two Numbers
 15. leetcode 415. Add Strings
 
+12.29
+1. leetcode 256. Paint House!重要
+2. leetcode 238. Product of Array Except Self 重写， 记住res[0] = 1
+3. leetcode 735. Asteroid Collision, while len(stack) >= 2 and stack[-1] < 0 and stack[-2] > 0:
+4. leetcode 572. Subtree of Another Tree!!重写
+5. leetcode 15. 3Sum
+6. leetcode 23. Merge k Sorted Lists
+7. leetcode 5. Longest Palindromic Substring
+8. leetcode 937. Reorder Data in Log Files 重写
+9. leetcode 56. Merge Intervals
+10. 289. Game of Life
+11. leetcode 253. Meeting Rooms II
+12. leetcode 647. Palindromic Substrings
+13. leetcode 560. Subarray Sum Equals K
+14. leetcode 215. Kth Largest Element in an Array
