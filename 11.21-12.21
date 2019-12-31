@@ -334,3 +334,21 @@ if candidates[i] > target:
 12. leetcode 647. Palindromic Substrings
 13. leetcode 560. Subarray Sum Equals K
 14. leetcode 215. Kth Largest Element in an Array
+
+12.30 
+1. leetcode 22. Generate Parentheses
+2. leetcode 121. Best Time to Buy and Sell Stock
+3. leetcode 394. Decode String!重写
+4. leetcode 332. Reconstruct Itinerary
+5. leetcode 953. Verifying an Alien Dictionary, flag1, flag2
+6. leetcode 31. Next Permutation
+7. leetcode 91. Decode Ways
+8. leetcode 139. Word Break,重写
+9. leetcode 322. Coin Change!!!最后的判断
+10 .leetcode 17. Letter Combinations of a Phone Number, index!!!!
+11. leetcode 240. Search a 2D Matrix II
+12. leetcode 621. Task Scheduler
+13. leetcode 227. Basic Calculator II, 重写
+14. leetcode 412. Fizz Buzz
+15. leetcode 48. Rotate Image
+16. leetcode 1048. Longest String Chain!!! hashmap!重写
