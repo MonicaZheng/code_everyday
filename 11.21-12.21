@@ -389,4 +389,11 @@ if candidates[i] > target:
 12. 698. Partition to K Equal Sum Subsets， 重写
 13. leetcode 567. Permutation in String,hashmap
 14. leetcode 706. Design HashMap
+15. leetcode 149. Max Points on a Line!!!,重写
+16. leetcode 20. Valid Parentheses
 
+1.5 
+1. leetcode 655. Print Binary Tree,重写
+2. leetcode 161. One Edit Distance, jiaohuan
+3. leetcode 76. Minimum Window Substring
+4. leetcode 57. Insert Interval,重写
