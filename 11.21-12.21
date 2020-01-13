@@ -99,7 +99,7 @@
 11. leetcdoe 525. Contiguous Array,重写
 
 12.3
-1. leetcode 228. Summary Ranges,重写!!!!重点
+1. leetcode 228. Summary Ranges,重写!!!!重点,注意数据类型！
 2. leetcode 735. Asteroid Collision
 3. leetcode 498. Diagonal Traverse,重写
 4. leetcode 348. Design Tic-Tac-Toe
@@ -443,3 +443,7 @@ if candidates[i] > target:
 2. leetcode 787. Cheapest Flights Within K Stops
 3. leetcode 134. Gas Station
 
+1.11
+1. leetcode 131. Palindrome Partitioning
+2. leetcode 797. All Paths From Source to Target
+3. leetcode 279. Perfect Squares
