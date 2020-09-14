@@ -5,4 +5,14 @@
 4. 69. Sqrt(x)
 
 
-
+9.13
+1. 144. Binary Tree Preorder Traversal. 重写
+2. 200. Number of Islands
+3. 102. Binary Tree Level Order Traversal
+4. 100. Same Tree 重写 ： > Time Complexity O(N)
+> Space Complexity O(h)
+5. 101. Symmetric Tree: 时间复杂度 : O(N)
+空间复杂度 : O(N) or O(Height)
+6. 127. Word Ladder
+7. 387. First Unique Character in a String
+8. 
