@@ -15,4 +15,23 @@
 空间复杂度 : O(N) or O(Height)
 6. 127. Word Ladder
 7. 387. First Unique Character in a String
-8. 
+8. 1. Two Sum
+9. 125. Valid Palindrome 双指针！重写
+10. 104. Maximum Depth of Binary Tree: O(n)
+11. 53. Maximum Subarray!!重写： res = -sys.maxsize - 1
+12. 173. Binary Search Tree Iterator >>>> inorder traverse! 重写
+13. 94. Binary Tree Inorder Traversal
+14. 20. Valid Parentheses!!! stack, 重写，特殊情况判断
+
+9.14
+1. 144. Binary Tree Preorder Traversal: stack
+2. 125. Valid Palindrome
+
+9.15
+1. 53. Maximum Subarray
+2. 205. Isomorphic Strings 重写
+3. 235. Lowest Common Ancestor of a Binary Search Tree !!重要
+4. 236. Lowest Common Ancestor of a Binary Tree!重要
+5. 33. Search in Rotated Sorted Array 重写
+
+
