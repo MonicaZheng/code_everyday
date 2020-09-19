@@ -47,3 +47,8 @@
 4. 339. Nested List Weight Sum, 重写
 5. 364. Nested List Weight Sum II
 6. 235. Lowest Common Ancestor of a Binary Search Tree
+
+9.18
+1. 46. Permutations, 重要
+The complexity is proportional to the size of the output (number of permutations). Just imagine that for the first position you have n possible candidates, then for the second position you have n-1 possible candidates (as the one is already taken in the first position), for the 3rd position you have n-2 candidates, etc. Therefore the complexity is O(n!). 
+2. 
