@@ -51,4 +51,8 @@
 9.18
 1. 46. Permutations, 重要
 The complexity is proportional to the size of the output (number of permutations). Just imagine that for the first position you have n possible candidates, then for the second position you have n-1 possible candidates (as the one is already taken in the first position), for the 3rd position you have n-2 candidates, etc. Therefore the complexity is O(n!). 
-2. 
+
+9.19
+1. 47. Permutations II
+2. 46. Permutations
+3. 339. Nested List Weight Sum 重要！！！！stack 写法！！！
