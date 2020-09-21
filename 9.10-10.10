@@ -56,3 +56,20 @@ The complexity is proportional to the size of the output (number of permutations
 1. 47. Permutations II
 2. 46. Permutations
 3. 339. Nested List Weight Sum 重要！！！！stack 写法！！！
+
+9.20 
+1. 364. Nested List Weight Sum II
+2. 53. Maximum Subarray
+3. 605. Can Place Flowers ! 重要！
+4. 341. Flatten Nested List Iterator: stack!!
+5. 380. Insert Delete GetRandom O(1)!! list+ hashmap 重要
+6. 150. Evaluate Reverse Polish Notation! 重要
+7. 671. Second Minimum Node In a Binary Tree， 重写
+
+9.21
+1. 205. Isomorphic Strings
+2. 236. Lowest Common Ancestor of a Binary Tree
+3. 449. Serialize and Deserialize BST， 重写： if node:
+                queue.append(node.left)
+                queue.append(node.right)
+4. 297. Serialize and Deserialize Binary Tree
