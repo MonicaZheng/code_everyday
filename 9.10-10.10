@@ -75,4 +75,7 @@ The complexity is proportional to the size of the output (number of permutations
 4. 297. Serialize and Deserialize Binary Tree
 5. 56. Merge Intervals 重要
 6. 744. Find Smallest Letter Greater Than Target
-7. 57. Insert Interval 
+7. 57. Insert Interval ：重新写 o(n) 的方法
+8. 349. Intersection of Two Arrays
+9. 39. Combination Sum, 重写！
+
