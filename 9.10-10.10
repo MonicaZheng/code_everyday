@@ -84,4 +84,5 @@ The complexity is proportional to the size of the output (number of permutations
 2. 40. Combination Sum II
 3. 254. Factor Combinations!!!重写
 4. 605. Can Place Flowers
-
+5. 366. Find Leaves of Binary Tree, dictionary, 重写
+6. 156. Binary Tree Upside Down, stack 重写！！！
