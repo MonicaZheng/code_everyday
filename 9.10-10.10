@@ -89,4 +89,5 @@ The complexity is proportional to the size of the output (number of permutations
 
 9.23
 1. 739. Daily Temperatures, satck, 重写
+2. 339. Nested List Weight Sum
 
