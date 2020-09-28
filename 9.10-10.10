@@ -97,3 +97,5 @@ The complexity is proportional to the size of the output (number of permutations
 3. 144. Binary Tree Preorder Traversal
 4.94. Binary Tree Inorder Traversal
 5. 173. Binary Search Tree Iterator
+6. 156. Binary Tree Upside Down
+7. 254. Factor Combinations1 重写
