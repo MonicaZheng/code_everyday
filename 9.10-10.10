@@ -121,3 +121,6 @@ The complexity is proportional to the size of the output (number of permutations
 
 10.9
 1. 605. Can Place Flowers
+2. 380. Insert Delete GetRandom O(1)
+3. 127. Word Ladder
+4. 
