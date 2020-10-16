@@ -136,3 +136,10 @@ The complexity is proportional to the size of the output (number of permutations
 9. 160. Intersection of Two Linked Lists,  重写
 10. 53. Maximum Subarray
 
+10.15
+1. 	341	Flatten Nested List Iterator,重写
+2.104. Maximum Depth of Binary Tree
+3. 104. Maximum Depth of Binary Tree， 重写
+4. 100. Same Tree
+5. 155. Min Stack
+
