@@ -151,3 +151,12 @@ The complexity is proportional to the size of the output (number of permutations
 5. 297. Serialize and Deserialize Binary Tree， 重写
 6. 50. Pow(x, n)
 7. 152. Maximum Product Subarray
+
+10.18
+1. 244. Shortest Word Distance II
+2. 412. Fizz Buzz, 重写！！
+3. 245. Shortest Word Distance III， 重写， issame
+4. 173. Binary Search Tree Iterator, 在 next 的时候update stack
+5. 33. Search in Rotated Sorted Array
+6. 125. Valid Palindrome  while left < right !!!!
+4. 
