@@ -159,4 +159,4 @@ The complexity is proportional to the size of the output (number of permutations
 4. 173. Binary Search Tree Iterator, 在 next 的时候update stack
 5. 33. Search in Rotated Sorted Array
 6. 125. Valid Palindrome  while left < right !!!!
-4. 
+7. 146. LRU Cache
