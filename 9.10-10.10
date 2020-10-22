@@ -162,3 +162,9 @@ The complexity is proportional to the size of the output (number of permutations
 7. 146. LRU Cache
 8. 655. Print Binary Tree,  重要，重写！
 
+10.21
+1.  341. Flatten Nested List Iterator
+2.  O(L * 26 * n) 127. Word Ladder
+3. 103. Binary Tree Zigzag Level Order Traversal
+4. 13. Roman to Integer,重写
+5. 373. Find K Pairs with Smallest Sums   O(kLogk) since que.size <= k and we do at most k loop.
