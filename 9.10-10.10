@@ -169,3 +169,15 @@ The complexity is proportional to the size of the output (number of permutations
 4. 13. Roman to Integer,重写
 5. 373. Find K Pairs with Smallest Sums   O(kLogk) since que.size <= k and we do at most k loop.
 6. 721. Accounts Merge！！！重看
+
+10.23
+1. 698. Partition to K Equal Sum Subsets  I think the time complexity is O(k * 2^n), 
+at least it's an upper bound. Because it takes the inner recursion 2^n time to find a good subset. 
+Once the 1st subset is found, we go on to find the second, which would take 2^n roughly (because some numbers have been marked as visited). So T = 2^n + 2^n + 2^n + ... = k * 2^n.
+2. 235. Lowest Common Ancestor of a Binary Search Tree！！！非常重要
+
+10.24
+1. 261. Graph Valid Tree！ 重写， bfs
+2. 28. Implement strStr()
+3. 
+
